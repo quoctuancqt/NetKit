@@ -9,28 +9,22 @@
     <Description>This library uses to configure OpenTelemetry in Asp.Net Core project.</Description>
     <PackageProjectUrl>https://github.com/quoctuancqt/NetKit</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <RepositoryUrl>https://github.com/quoctuancqt/NetKit</RepositoryUrl>
+    <RepositoryUrl>https://github.com/quoctuancqt/NetKit/NetKit.OpenTelemetry</RepositoryUrl>
     <PackageTags>OpenTelemetry, AspNet Core</PackageTags>
     <Copyright>TuanCao © 2022</Copyright>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Authors>Tuan Cao</Authors>
+    <AssemblyVersion>1.0.1</AssemblyVersion>
+    <FileVersion>1.0.1</FileVersion>
+    <PackageReleaseNotes>Update package info</PackageReleaseNotes>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="contentFiles\README.md" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="contentFiles\README.md">
+    <Content Include="README.md">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="..\README.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -43,6 +37,13 @@
     <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.0.0-rc9" />
     <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.0.0-rc9" />
     <PackageReference Include="OpenTelemetry.Instrumentation.Http" Version="1.0.0-rc9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

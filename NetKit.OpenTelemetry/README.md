@@ -1,7 +1,7 @@
 ﻿# Installation
 1. Install NetKit.OpenTelemetry package:
 ```
-PM> Install-Package NetKit.OpenTelemetry -Version 1.0.0
+PM> Install-Package NetKit.OpenTelemetry
 ```
 2. Add these configuration below in your project:
 
