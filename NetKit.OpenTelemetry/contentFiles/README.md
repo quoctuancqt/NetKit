@@ -1,4 +1,4 @@
-# appsettingsSettings.json
+﻿# appsettingsSettings.json
 ```
 {
     "OpenTelemetry": {

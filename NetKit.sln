@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetKit.OpenTelemetry", "NetKit.OpenTelemetry\NetKit.OpenTelemetry.csproj", "{81CBAB07-07F5-44C7-B77B-49648EB65ACD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{BE6EDFA0-873B-4387-89DC-D07A1EA9A79D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetKit.OpenTelemetry.Sample", "samples\NetKit.OpenTelemetry.Sample\NetKit.OpenTelemetry.Sample.csproj", "{8B1851A8-1B34-4C0C-9E9C-89E334B9F726}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81CBAB07-07F5-44C7-B77B-49648EB65ACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81CBAB07-07F5-44C7-B77B-49648EB65ACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81CBAB07-07F5-44C7-B77B-49648EB65ACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81CBAB07-07F5-44C7-B77B-49648EB65ACD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B1851A8-1B34-4C0C-9E9C-89E334B9F726}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B1851A8-1B34-4C0C-9E9C-89E334B9F726}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B1851A8-1B34-4C0C-9E9C-89E334B9F726}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B1851A8-1B34-4C0C-9E9C-89E334B9F726}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8B1851A8-1B34-4C0C-9E9C-89E334B9F726} = {BE6EDFA0-873B-4387-89DC-D07A1EA9A79D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2C0FB034-7B53-450E-87E7-D2CC2A509E6E}
+	EndGlobalSection
+EndGlobal
