@@ -1,5 +1,6 @@
 using NetKit.HttpClientExtension;
 using NetKit.PollyHttpClient.Sample;
+using NetKit.Swashbuckle;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +9,15 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+builder.Services.AddNetKitSwashbuckle(builder.Configuration, options =>
+{
+    // Uncomment to use JWT security header
+    // options.AddJwtSecurityDefinition();
+});
+
+// Uncomment to configure AuthService to check access swagger endpoint
+// builder.Services.AddSwashbuckleAuthService<SwaggerAuthService>();
 
 HtttpRetryExtension.Config();
 
@@ -23,8 +32,10 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    // Uncomment to use authorize swagger endpoint
+    // app.UseSwaggerAuthorized();
+
+    app.UseNetKitSwashbuckle();
 }
 
 app.UseAuthorization();

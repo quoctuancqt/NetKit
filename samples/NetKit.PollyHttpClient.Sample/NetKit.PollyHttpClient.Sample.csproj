@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="NetKit.HttpClient.Extension" Version="1.0.7" />
+    <PackageReference Include="NetKit.Swashbuckle" Version="1.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
   </ItemGroup>
 

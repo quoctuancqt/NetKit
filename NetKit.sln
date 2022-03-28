@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetKit.OpenTelemetry.Sample
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetKit.HttpClient.Extension", "NetKit.HttpClient.Extension\NetKit.HttpClient.Extension.csproj", "{EFB268B8-BB58-4302-9677-CF8990ECA703}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetKit.PollyHttpClient.Sample", "samples\NetKit.PollyHttpClient.Sample\NetKit.PollyHttpClient.Sample.csproj", "{C36203A2-6DE9-43AE-BBD3-D01F5260050F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetKit.PollyHttpClient.Sample", "samples\NetKit.PollyHttpClient.Sample\NetKit.PollyHttpClient.Sample.csproj", "{C36203A2-6DE9-43AE-BBD3-D01F5260050F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetKit.Swashbuckle", "NetKit.Swashbuckle\NetKit.Swashbuckle.csproj", "{7877D203-7786-405E-8852-8C4351E04D45}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{C36203A2-6DE9-43AE-BBD3-D01F5260050F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C36203A2-6DE9-43AE-BBD3-D01F5260050F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C36203A2-6DE9-43AE-BBD3-D01F5260050F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7877D203-7786-405E-8852-8C4351E04D45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7877D203-7786-405E-8852-8C4351E04D45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7877D203-7786-405E-8852-8C4351E04D45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7877D203-7786-405E-8852-8C4351E04D45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

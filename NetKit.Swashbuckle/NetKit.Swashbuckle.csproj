@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>Tuan Cao</Authors>
+    <Copyright>TuanCao © 2022</Copyright>
+    <PackageProjectUrl>https://github.com/quoctuancqt/NetKit</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/quoctuancqt/NetKit/NetKit.Swashbuckle</RepositoryUrl>
+    <PackageTags>Swashbuckle, AspNet Core</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Version>1.0.3</Version>
+    <PackageReleaseNotes>Fix minor issue</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="README.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.3.0" />
+  </ItemGroup>
+
+</Project>
