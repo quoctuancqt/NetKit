@@ -1,4 +1,11 @@
-﻿# appsettingsSettings.json
+﻿# Installation
+1. Install NetKit.OpenTelemetry package:
+```
+PM> Install-Package NetKit.OpenTelemetry -Version 1.0.0
+```
+2. Add these configuration below in your project:
+
+## appsettingsSettings.json
 ```
 {
     "OpenTelemetry": {
@@ -30,7 +37,7 @@
 }
 ```
 
-# collector-config.yml
+## collector-config.yml
 ```
 # Configure receivers
 # We only need otlp protocol on grpc, but you can use http, zipkin, jaeger, aws, etc.
@@ -85,7 +92,7 @@ service:
 
 ```
 
-# prometheus.yaml
+## prometheus.yaml
 ```
 scrape_configs:
 - job_name: 'otel-collector'
@@ -95,7 +102,7 @@ scrape_configs:
   - targets: ['otel-collector:8888']
 ```
 
-# docker-compose.yml
+## docker-compose.yml
 ```
 version: '3.8'
 
@@ -129,3 +136,25 @@ services:
       - zipkin-all-in-one
 
 ```
+3. In Programs.cs, add these line to configure OpenTelemetry in your project:
+  - Resolve OpenTelemetry
+  ```
+  var openTelemetryInfo = OpenTelemetryExtensions.GetResourceBuilder(builder.Configuration, "AspNetCoreExampleService");
+  ```
+  - Register OpenTelemetry Tracing
+  ```
+  builder.Services.AddNetKitOpenTelemetryTracing(builder.Configuration, openTelemetryInfo);
+
+  ```
+  - Register OpenTelemetry Logging
+  ```
+  builder.Services.AddNetKitOpenTelemetryLogging(builder.Configuration, openTelemetryInfo);
+  ```
+  - Register OpenTelemetry Metrics
+  ```
+  builder.Services.AddNetKitOpenTelemetryMetrics(builder.Configuration, openTelemetryInfo);
+  ```
+  - If you're using Prometheus exporter, you should adds OpenTelemetry Prometheus scraping endpoint middleware 
+  ```
+  app.UseNetKitOpenTelemetryMetricsExporter(builder.Configuration);
+  ```

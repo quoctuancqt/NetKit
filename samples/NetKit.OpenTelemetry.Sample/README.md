@@ -12,8 +12,3 @@ service name, version and the machine on which this program is running.
 
 The sample rate is set to emit all the traces using `AlwaysOnSampler`.
 You can try out different samplers like `TraceIdRatioBasedSampler`.
-
-## References
-
-* [ASP.NET Core 3.1 Example](https://github.com/open-telemetry/opentelemetry-dotnet/tree/98cb28974af43fc893ab80a8cead6e2d4163e144/examples/AspNetCore)
-* [OpenTelemetry Project](https://opentelemetry.io/)
